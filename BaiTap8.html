@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng sản phẩm và lịch chiếu phim</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: lightblue;
+            font-size: 20px;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .image-cell {
+            text-align: center;
+        }
+        .image-cell img {
+            width: 100px;
+            display: block;
+            margin: auto;
+        }
+        .first-table {
+            width: 50%; /* Chiều rộng cho bảng lớn thứ nhất */
+        }
+        .second-table {
+            width: 40%; /* Chiều rộng nhỏ hơn cho bảng lớn thứ hai */
+        }
+        .second-table th {
+            background-color: white;
+            color: blue; /* Màu chữ của các ô tiêu đề */
+            font-size: 18px;
+        }
+        .second-table .header-row {
+            color: black; /* Màu chữ của tiêu đề bảng */
+            font-weight: bold;
+        }
+        .inner-table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="first-table">
+        <tr>
+            <th colspan="2">Bảng giá sản phẩm</th>
+        </tr>
+        <tr>
+            <td class="inner-table-container">
+                <table>
+                    <tr>
+                        <td class="bold-text">Nơi sản xuất</td>
+                        <td>Việt Nam</td>
+                    </tr>
+                    <tr>
+                        <td class="bold-text">Giá tiền</td>
+                        <td>300.000đ</td>
+                    </tr>
+                    <tr>
+                        <td class="bold-text">Thời gian bảo hành</td>
+                        <td>6 tháng</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="image-cell"><img src="./giày.jpg" alt="Product Image"></td>
+        </tr>
+    </table>
+
+    <table class="second-table">
+        <tr>
+            <th colspan="2">Mạng nghệ thuật & giải trí</th>
+        </tr>
+        <tr class="header-row">
+            <td>Phim</td>
+            <td>Ngày chiếu</td>
+        </tr>
+        <tr>
+            <td>Sherlock Holmes</td>
+            <td>Thứ hai</td>
+        </tr>
+        <tr>
+            <td>Lovejoy</td>
+            <td>Thứ hai</td>
+        </tr>
+    </table>
+
+</body>
+</html>
